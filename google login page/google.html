@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0; box-sizing: border-box;
+            font-family:sans-serif;
+            user-select: none;
+        }
+        .container{
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            
+            border: 1px solid ;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 5px;
+        
+        }
+        .left{
+            margin-right:20px;        
+        }
+        form input[type=text]{
+            width: 49%;
+            
+        }
+        form input[type=email]{
+            width: 100%;
+        }
+        input:focus{
+            outline: none;
+            border-color: rgb(127, 187, 236);
+            
+            border-top: 1px solid  rgb(127, 187, 236) ;
+        }
+        input[type=number]{
+            width: 100%;
+            -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+         margin: 0;}
+        input{
+            height: 27px;
+            margin: 5px 0;
+            border: 1px solid;
+            border-radius: 3px;
+            padding: 10px;
+        }
+        .google{
+            margin: -10 0 10;
+        }
+        .demo{
+            margin: -8 0 20 0 ;
+        }
+         form input[type=password]{
+            width: 49%;
+            
+        }
+        .check{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 25 0 0 0;
+        }
+        .p{
+            display: flex;
+            align-items: center;
+            
+        }
+        #lr{
+            margin: 0 5 0 0 ;
+            cursor: pointer;
+        }
+        #btn{
+            color: white;
+            background-color:#222a6b;
+            border: none;
+            padding: 9px;
+            border-radius: 5px;
+            width: 120px;
+            cursor: pointer;
+        }
+         @media only screen and (max-width: 770px){
+            body{
+                overflow-x: hidden;
+                
+            }
+            .right{
+                display: none;
+            }
+            .container{
+                flex-direction: column;
+                border: none;
+            }
+            
+         }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="left"><img class="google" src="googlelogo.jpg" width="100px" alt=""><p class="demo"> <b>Welcome to Google login page</b></p><p>first and last name :-</p>
+                <input type="text" placeholder="First name" required> <input type="text" placeholder="Last name" required>
+                <p>email :-</p><input type="email" placeholder="enter your email">
+                <p>mobile no :-</p><input type="number" placeholder="e.g. +914578545695 "><p>password :-</p>
+                <input type="password" id="pass" placeholder="enter your password">&nbsp;<input id="cpass" type="password" placeholder="confirm password">
+                <div class="check"><p class="p"><input type="checkbox" id="lr" onclick="show()">show password </p> <button  id="btn" type="submit">submit</button></div>
+            </div>
+
+          
+           <div class="right"><img src="logo.png" width="250px" height="350" alt=""></div>
+        </form>   
+    </div>
+
+    <script>
+        function show(){
+            var pas = document.getElementById('pass');
+            var cpas = document.getElementById('cpass');
+
+            if (pass.type === "password" && cpass.type === "password"){
+                pas.type="text";
+                cpas.type="text";
+            }
+            else{
+                pas.type="password";
+                cpas.type="password";
+            }
+
+        }
+        
+
+    </script>
+</body>
+</html>
